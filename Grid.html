@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Webpage using Grid and Flexbox</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        /* Header */
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* Flexbox Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            background-color: #555;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+
+        /* Grid Layout */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 8px gray;
+        }
+
+        .card h2 {
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #555;
+            line-height: 1.5;
+        }
+
+        /* Footer using Flexbox */
+        footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #333;
+            color: white;
+            padding: 15px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 800px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .grid-container {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>My Responsive Website</h1>
+        <p>Using CSS Grid and Flexbox</p>
+    </header>
+
+    <!-- Flexbox -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <!-- Grid -->
+    <section class="grid-container">
+
+        <div class="card">
+            <h2>HTML</h2>
+            <p>
+                HTML is used to create the structure of a webpage.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>CSS</h2>
+            <p>
+                CSS is used to design and style webpages.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>JavaScript</h2>
+            <p>
+                JavaScript is used to add dynamic behavior to webpages.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Flexbox</h2>
+            <p>
+                Flexbox is useful for arranging elements in one direction.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Grid</h2>
+            <p>
+                CSS Grid is useful for creating rows and columns.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Responsive Design</h2>
+            <p>
+                Responsive design makes webpages work on different screen sizes.
+            </p>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 My Responsive Website</p>
+    </footer>
+
+</body>
+</html>
